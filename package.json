@@ -1,0 +1,18 @@
+{
+  "private": true,
+  "dependencies": {
+    "antd": "^3.1.4",
+    "draft-js": "^0.10.5",
+    "dva": "^2.1.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  },
+  "devDependencies": {
+    "roadhog": "^2.0.0"
+  },
+  "scripts": {
+    "start": "roadhog server",
+    "dev": "roadhog server",
+    "build": "roadhog build"
+  }
+}

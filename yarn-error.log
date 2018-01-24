@@ -1,0 +1,40 @@
+Arguments: 
+  /usr/local/bin/node /Users/0001652/.yarn/bin/yarn.js
+
+PATH: 
+  /Users/0001652/.yarn/bin:/Users/0001652/.config/yarn/global/node_modules/.bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/0001652/.yarn/bin:/Users/0001652/.config/yarn/global/node_modules/.bin
+
+Yarn version: 
+  1.3.2
+
+Node version: 
+  8.9.0
+
+Platform: 
+  darwin x64
+
+npm manifest: 
+  {
+    "private": true,
+    "dependencies": {
+      "dva": "^2.1.0",
+      "react": "^16.2.0",
+      "react-dom": "^16.2.0"
+    },
+    "devDependencies": {
+      "roadhog": "^2.0.0"
+    },
+    "scripts": {
+      "start": "roadhog server",
+      "build": "roadhog build"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  Error: EEXIST: file already exists, mkdir '/Users/0001652/Documents/freshes-draft/node_modules/webpack-dev-server/node_modules/expand-brackets/node_modules'
