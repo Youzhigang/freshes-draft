@@ -1,4 +1,4 @@
-export const INLINE_STYLES = [
+const INLINE_STYLE_BTNS = [
   {
     label: 'B',
     style: 'BOLD',
@@ -15,3 +15,5 @@ export const INLINE_STYLES = [
     className: 'underline'
   }
 ]
+
+export default INLINE_STYLE_BTNS

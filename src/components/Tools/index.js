@@ -1,28 +1,28 @@
 import React, { Component } from 'react'
 import InlineStyleBtn from './InlineStyleBtn'
-import { INLINE_STYLES } from './enum'
+import ColorBtn from './ColorBtn'
+import INLINE_STYLE_BTNS from './InlineStyleBtn/config'
 import styles from './index.less'
 
-class Tools extends Component {
-  constructor (props) {
-    super(props)
-  }
-  render () {
-    return (
-      <div className={styles.tools}>
-        {INLINE_STYLES.map((data, index) => {
-          return (
-            <InlineStyleBtn
-              editorState={this.props.editorState}
-              onChange={this.props.onChange}
-              data={data}
-              key={index}
-            />
-          )
-        })}
-      </div>
-    )
-  }
+const Tools = ({ editorState, onChange }) => {
+  return (
+    <div className={styles.tools}>
+      {INLINE_STYLE_BTNS.map((data, index) => {
+        return (
+          <InlineStyleBtn
+            editorState={editorState}
+            onChange={onChange}
+            data={data}
+            key={index}
+          />
+        )
+      })}
+      <ColorBtn
+        editorState={editorState}
+        onChange={onChange}
+      />
+    </div>
+  )
 }
 
 export default Tools

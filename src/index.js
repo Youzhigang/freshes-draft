@@ -1,28 +1,15 @@
-import dva from 'dva';
-import { Router, Route, Switch } from 'dva/router';
-import { EditorState } from 'draft-js'
-import Example from './containers/Example'
-import 'antd/dist/antd.css';
+import dva from 'dva'
+import { Router, Route, Switch } from 'dva/router'
+import draft from './models/draft'
+import Example from './Example'
+import 'antd/dist/antd.css'
 
 // 1. Initialize
-const app = dva();
+const app = dva()
 
 // 2. Model
 // Remove the comment and define your model.
-app.model({
-  namespace: 'draft',
-  state: {
-    editorState: EditorState.createEmpty()
-  },
-  reducers: {
-    onChange (draft, { editorState }) {
-      return {
-        ...draft,
-        editorState
-      }
-    }
-  }
-});
+app.model(draft)
 
 // 3. Router
 app.router(({ history }) =>
@@ -34,4 +21,4 @@ app.router(({ history }) =>
 );
 
 // 4. Start
-app.start('#root');
+app.start('#root')
